@@ -19,12 +19,12 @@ Some general rules of testing:
   usually handled by :meth:`setUp()` and :meth:`tearDown()` methods.
 
 - Try hard to make tests that run fast. If one single test needs more than a
-  few millisecond to run, development will be slowed down or the tests will
-  not be run as often as desirable. In some cases, tests can't be fast because
-  they need a complex data structure to work on, and this data structure must
-  be loaded every time the test runs. Keep these heavier tests in a separate
-  test suite that is run by some scheduled task, and run all other tests as
-  often as needed.
+  few milliseconds to run, development will be slowed down or the tests will
+  not be run as often as is desirable. In some cases, tests can't be fast
+  because they need a complex data structure to work on, and this data structure
+  must be loaded every time the test runs. Keep these heavier tests in a
+  separate test suite that is run by some scheduled task, and run all other
+  tests as often as needed.
 
 - Learn your tools and learn how to run a single test or a test case. Then,
   when developing a function inside a module, run this function's tests very
@@ -58,7 +58,7 @@ Some general rules of testing:
   good set of tests, you or other maintainers will rely largely on the
   testing suite to fix the problem or modify a given behavior. Therefore
   the testing code will be read as much as or even more than the running
-  code. A unit test whose purpose is unclear is not very helpful is this
+  code. A unit test whose purpose is unclear is not very helpful in this
   case.
 
 - Another use of the testing code is as an introduction to new developers. When
