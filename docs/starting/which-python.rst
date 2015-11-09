@@ -15,7 +15,7 @@ The basic gist of the state of things is as follows:
 
 1. Python 2.7 has been the standard for a *long* time.
 2. Python 3 introduced major changes to the language, which many developers are unhappy with.
-3. Python 2.7 will receive necessary security updates for a few years.
+3. Python 2.7 will receive necessary security updates until 2020 [#pep373_eol]_.
 4. Python 3 is continually evolving, like Python 2 did in years past.
 
 So, you can now see why this is not such an easy decision.
@@ -58,8 +58,8 @@ software you're depending on will block your adoption of Python 3.
 
 `Further Reading <http://wiki.python.org/moin/Python2orPython3>`_
 
-It is possible to `write code that works on Python 2.6, 2.7, and 3.3
-<http://lucumr.pocoo.org/2013/5/21/porting-to-python-3-redux/>`_. This
+It is possible to `write code that works on Python 2.6, 2.7, and Python 3
+<https://docs.python.org/3/howto/pyporting.html>`_. This
 ranges from trivial to hard depending upon the kind of software
 you are writing; if you're a beginner there are far more important things to
 worry about.
@@ -151,3 +151,5 @@ PythonNet supports from Python 2.3 up to Python 2.7. [#pythonnet_ver]_
 .. [#iron_ver] http://ironpython.codeplex.com/releases/view/81726
 
 .. [#pythonnet_ver] http://pythonnet.github.io/readme.html
+
+.. [#pep373_eol] https://www.python.org/dev/peps/pep-0373/#id2

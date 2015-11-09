@@ -9,7 +9,7 @@ The Python Tutorial
 
 This is the official tutorial. It covers all the basics, and offers a tour of
 the language and the standard library. Recommended for those who need a
-quickstart guide to the language.
+quick-start guide to the language.
 
     `The Python Tutorial <http://docs.python.org/tutorial/index.html>`_
 
@@ -31,6 +31,16 @@ resource for learning all aspects of the language.
 
     `Python for You and Me <http://pymbook.readthedocs.org/>`_
 
+Online Python Tutor
+~~~~~~~~~~~~~~~~~~~
+
+Online Python Tutor gives you a visual step by step 
+representation of how your program runs. Python Tutor
+helps people overcome a fundamental barrier to learning
+programming by understanding what happens as the computer 
+executes each line of a program's source code.
+
+    `Online Python Tutor <http://pythontutor.com/>`_
 
 Invent Your Own Computer Games with Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,7 +140,7 @@ no previous programming experience.
 
 
 Learn to Program in Python with Codeacademy
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A Codeacademy course for the absolute Python beginner. This free and interactive course provides and teaches the basics (and beyond) of Python programming whilst testing the user's knowledge in between progress.
 
@@ -219,6 +229,17 @@ formal, but rather focuses on explaining the underlying intuition and shows
 how to implement the algorithms in Python.
 
     `Programming Collective Intelligence <http://shop.oreilly.com/product/9780596529321.do>`_
+	
+	
+Transforming Code into Beautiful, Idiomatic Python
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Transforming Code into Beautiful, Idiomatic Python is a video by Raymond Hettinger. 
+Learn to take better advantage of Python's best features and improve existing code
+through a series of code transformations, "When you see this, do that instead."
+
+    `Transforming Code into Beautiful, Idiomatic Python <https://www.youtube.com/watch?v=OSGv2VnC0go>`_
+
 
 References
 ----------
@@ -241,7 +262,7 @@ of the language.
     `The Python Language Reference <http://docs.python.org/reference/index.html>`_
 
 Python Pocket Reference
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Python Pocket Reference, written by Mark Lutz, is an easy to use reference to
 the core language, with descriptions of commonly used modules and toolkits. It
@@ -250,7 +271,7 @@ covers Python 3 and 2.6 versions.
     `Python Pocket Reference <http://shop.oreilly.com/product/9780596158095.do>`_
 	
 Python Cookbook
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Python Cookbook, written by David Beazley and Brian K. Jones, is packed with
 practical recipes. This book covers the core python language as well as tasks

@@ -15,7 +15,7 @@ and the mailing list https://groups.google.com/forum/#!forum/project-camelot
 
 Cocoa
 -----
-.. note:: The Cocoa framework is only available on OS X. Don't pick this if you're writing a cross-platform application!
+.. note:: The Cocoa framework is only available on OS X. Don't pick this if you're writing a cross-platform application!
 
 GTk
 ---
@@ -49,7 +49,9 @@ PySide
 ------
 PySide is a Python binding of the cross-platform GUI toolkit Qt.
 
-http://developer.qt.nokia.com/wiki/PySideDownloads/
+  pip install pyside
+
+https://wiki.qt.io/Category:LanguageBindings::PySide::Downloads
 
 PyQt
 ----

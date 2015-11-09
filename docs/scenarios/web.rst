@@ -78,6 +78,22 @@ already exist to suit your needs.
 email to flask@librelist.com and reply to the confirmation email.
 
 
+Web.py
+------
+`Web.py <http://webpy.org/>`_ web.py is a web framework for Python that is as 
+simple as it is powerful. You won't find wizards or boilerplate websites 
+in Web.py and will have to build from scratch. Web.py provides no administration 
+utility. Web.py is the brainchild of Aaron Swartz, who developed it while working
+on Reddit.com.
+
+
+Web2py
+------
+A full stack web framework and platform focused in the ease of use. It focuses on
+rapid development, favors convention over configuration approach and follows a 
+model–view–controller (MVC) architectural pattern.
+
+
 Werkzeug
 --------
 
@@ -167,8 +183,8 @@ programming languages and protocols - including Python and WSGI. uWSGI can
 either be run as a stand-alone web router, or be run behind a full web
 server (such as Nginx or Apache).  In the latter case, a web server can
 configure uWSGI and an application's operation over the
-`uwsgi <https://uwsgi-docs.readthedocs.org/en/latest/Protocol.html>`_
-protocol.  uWSGI's web server support allows for dynamically configuring
+`uwsgi protocol <https://uwsgi-docs.readthedocs.org/en/latest/Protocol.html>`_.
+uWSGI's web server support allows for dynamically configuring
 Python, passing environment variables and further tuning.  For full details,
 see `uWSGI magic
 variables <https://uwsgi-docs.readthedocs.org/en/latest/Vars.html>`_.
@@ -472,6 +488,43 @@ you can replace it with a more terse and readable syntax that uses the pattern
 
 But keep in mind that the full `<span tal:replace="expression">Default Text</span>` 
 syntax also allows for default content in the unrendered template.
+
+Mako
+----
+`Mako <http://www.makotemplates.org/>`_ is a template language that compiles to Python
+for maximum performance. Its syntax and api is borrowed from the best parts of other
+templating languages like Django and Jinja2 templates. It is the default template
+language included with the `Pylons and Pyramid <http://www.pylonsproject.org/>`_ web
+frameworks.
+
+An example template in Mako looks like:
+
+.. code-block:: html
+
+    <%inherit file="base.html"/>
+    <%
+        rows = [[v for v in range(0,10)] for row in range(0,10)]
+    %>
+    <table>
+        % for row in rows:
+            ${makerow(row)}
+        % endfor
+    </table>
+
+    <%def name="makerow(row)">
+        <tr>
+        % for name in row:
+            <td>${name}</td>\
+        % endfor
+        </tr>
+    </%def>
+
+To render a very basic template, you can do the following:
+
+.. code-block:: python
+
+    from mako.template import Template
+    print(Template("hello ${data}!").render(data="world"))
 
 .. rubric:: References
 

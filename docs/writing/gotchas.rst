@@ -6,7 +6,7 @@ avoids surprises. However, there are a few cases that can be confusing to
 newcomers.
 
 Some of these cases are intentional but can be potentially surprising. Some
-could arguably be considered language warts. In general though, what follows
+could arguably be considered language warts. In general, what follows
 is a collection of potentially tricky behavior that might seem strange at first
 glance, but is generally sensible once you're aware of the underlying cause for
 the surprise.
@@ -23,7 +23,7 @@ Python's treatment of mutable default arguments in function definitions.
 What You Wrote
 ~~~~~~~~~~~~~~
 
-.. testcode::
+.. code-block:: python
 
     def append_to(element, to=[]):
         to.append(element)
@@ -32,7 +32,7 @@ What You Wrote
 What You Might Have Expected to Happen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. testcode::
+.. code-block:: python
 
     my_list = append_to(12)
     print my_list

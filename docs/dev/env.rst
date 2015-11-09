@@ -100,10 +100,6 @@ it can be some work to wire up correctly. A good start if you're already an
 Emacs user is `Python Programming in Emacs`_ at EmacsWiki.
 
 1. Emacs itself comes with a Python mode.
-2. Python ships with an alternate version:
-   `python-mode.el <https://launchpad.net/python-mode>`_
-3. Fabián Ezequiel Gallina's `python.el <https://github.com/fgallina/python.el>`_
-   provides nice functionality and behavior out of the box
 
 .. _Python Programming in Emacs: http://emacswiki.org/emacs/PythonProgrammingInEmacs
 
@@ -150,10 +146,15 @@ PyCharm / IntelliJ IDEA
 `PyCharm <http://www.jetbrains.com/pycharm/>`_ is developed by JetBrains, also
 known for IntelliJ IDEA. Both share the same code base and most of PyCharm's
 features can be brought to IntelliJ with the free
-`Python Plug-In <http://plugins.intellij.net/plugin/?id=631>`_.  There are two
+`Python Plug-In <https://plugins.jetbrains.com/plugin/?idea&pluginId=631>`_.  There are two
 versions of PyCharm: Professional Edition (Free 30-day trial) and Community
 Edition(Apache 2.0 License) with fewer features.
 
+Enthought Canopy
+----------------
+`Enthought Canopy <https://www.enthought.com/products/canopy/>`_ is a Python
+IDE which is focused towards Scientists and Engineers as it provides pre 
+installed libraries for data analysis. 
 
 Eclipse
 -------
@@ -174,11 +175,11 @@ alternative.
 Spyder
 ------
 
-`Spyder <http://code.google.com/p/spyderlib/>`_ is an IDE specifically geared
+`Spyder <https://github.com/spyder-ide/spyder>`_ is an IDE specifically geared
 toward working with scientific Python libraries (namely
 `Scipy <http://www.scipy.org/>`_). It includes integration with pyflakes_,
 `pylint <http://www.logilab.org/857>`_ and
-`rope <http://rope.sourceforge.net/>`_.
+`rope <https://github.com/python-rope/rope>`_.
 
 Spyder is open-source (free), offers code completion, syntax highlighting,
 a class and function browser, and object inspection.
@@ -227,16 +228,35 @@ Interpreter Tools
 Virtual Environments
 --------------------
 
-A Virtual Environment is a tool to keep the dependencies required by different
-projects in separate places, by creating virtual Python environments for them.
-It solves the "Project X depends on version 1.x but, Project Y needs 4.x"
-dilemma, and keeps your global site-packages directory clean and manageable.
-
-For example, you can work on a project which requires Django 1.3 while also
-maintaining a project which requires Django 1.0.
+Virtual Environments provide a powerful way to isolate project package dependencies. This means that you can use packages particular to a Python project without installing them system wide and thus avoiding potential version conflicts.
 
 To start using and see more information:
-`Virtual Environments <http://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ docs. 
+`Virtual Environments <http://github.com/kennethreitz/python-guide/blob/master/docs/dev/virtualenvs.rst>`_ docs.
+
+
+pyenv
+-----
+
+`pyenv <https://github.com/yyuu/pyenv>`_ is a tool to allow multiple versions
+of the Python interpreter to be installed at the same time.  This solves the
+problem of having different projects requiring different versions of Python.
+For example, it becomes very easy to install Python 2.7 for compatibility in
+one project, whilst still using Python 3.4 as the default interpreter.
+pyenv isn't just limited to the CPython versions - it will also install PyPy,
+anaconda, miniconda, stackless, jython, and ironpython interpreters.
+
+pyenv works by filling a ``shims`` directory with fake versions of the Python
+interpreter (plus other tools like ``pip`` and ``2to3``).  When the system
+looks for a program named ``python``, it looks inside the ``shims`` directory
+first, and uses the fake version, which in turn passes the command on to
+pyenv.  pyenv then works out which version of Python should be run based on
+environment variables, ``.python-version`` files, and the global default.
+
+pyenv isn't a tool for managing virtual environments, but there is the plugin
+`pyenv-virtualenv <https://github.com/yyuu/pyenv-virtualenv>`_ which automates
+the creation of different environments, and also makes it possible to use the
+existing pyenv tools to switch to different environments based on environment
+variables or ``.python-version`` files.
 
 Other Tools
 :::::::::::
@@ -274,7 +294,11 @@ most out of using Python interactively. Its main components are:
 
     $ pip install ipython
 
+To download and install IPython with all it's optional dependencies for the notebook, qtconsole, tests, and other functionalities
 
+.. code-block:: console
+
+    $ pip install ipython[all]
 
 BPython
 -------
@@ -295,3 +319,24 @@ features:
 .. code-block:: console
 
     $ pip install bpython
+
+ptpython
+--------
+
+`ptpython <https://github.com/jonathanslenders/ptpython/>`_ is a REPL build
+on top of the `prompt_toolkit <http://github.com/jonathanslenders/python-prompt-toolkit>`_
+library. It is considered to be an alternative to BPython_. Features include:
+
+* Syntax highlighting
+* Autocompletion
+* Multiline editing
+* Emacs and VIM Mode
+* Embedding REPL inside of your code
+* Syntax Validation
+* Tab pages
+* Support for integrating with IPython_'s shell, by installing IPython
+  ``pip install ipython`` and running ``ptipython``.
+
+.. code-block:: console
+
+    $ pip install ptpython

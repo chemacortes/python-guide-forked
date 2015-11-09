@@ -6,7 +6,7 @@ Code Style
 If you ask Python programmers what they like most in Python, they will
 often say its high readability.  Indeed, a high level of readability
 is at the heart of the design of the Python language, following the
-recognised fact that code is read much more often than it is written.
+recognized fact that code is read much more often than it is written.
 
 One reason for Python code to be easily read and understood is its relatively
 complete set of Code Style guidelines and "Pythonic" idioms.
@@ -351,6 +351,8 @@ Instead, use a list comprehension:
 
     four_lists = [[] for __ in xrange(4)]
 
+Create a string from a list
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A common idiom for creating strings is to use :py:meth:`str.join` on an empty
 string.
@@ -363,30 +365,53 @@ string.
 This will set the value of the variable *word* to 'spam'. This idiom can be
 applied to lists and tuples.
 
+Searching for an item in a collection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Sometimes we need to search through a collection of things. Let's look at two
-options: lists and dictionaries.
+options: lists and sets.
 
 Take the following code for example:
 
 .. code-block:: python
 
-    d = {'s': [], 'p': [], 'a': [], 'm': []}
+    s = set(['s', 'p', 'a', 'm'])
     l = ['s', 'p', 'a', 'm']
 
-    def lookup_dict(d):
-        return 's' in d
+    def lookup_set(s):
+        return 's' in s
 
     def lookup_list(l):
         return 's' in l
 
-Even though both functions look identical, because *lookup_dict* is utilizing
-the fact that dictionaries in Python are hashtables, the lookup performance
-between the two is very different. Python will have to go through each item
-in the list to find a matching case, which is time consuming. By analysing
-the hash of the dictionary, finding keys in the dictionary can be done very
-quickly.  For more information see this
+Even though both functions look identical, because *lookup_set* is utilizing
+the fact that sets in Python are hashtables, the lookup performance
+between the two is very different. To determine whether an item is in a list,
+Python will have to go through each item until it finds a matching item. 
+This is time consuming, especially for long lists. In a set, on the other
+hand, the hash of the item will tell Python where in the set to look for
+a matching item. As a result, the search can be done quickly, even if the
+set is large. Searching in dictionaries works the same way. For 
+more information see this
 `StackOverflow <http://stackoverflow.com/questions/513882/python-list-vs-dict-for-look-up-table>`_
-page.
+page. For detailed information on the amount of time various common operations
+take on each of these data structures, see 
+`this page <https://wiki.python.org/moin/TimeComplexity?>`_.
+
+Because of these differences in performance, it is often a good idea to use 
+sets or dictionaries instead of lists in cases where: 
+
+* The collection will contain a large number of items
+
+* You will be repeatedly searching for items in the collection
+
+* You do not have duplicate items. 
+
+For small collections, or collections which you will not frequently be 
+searching through, the additional time and memory required to set up the 
+hashtable will often be greater than the time saved by the improved search 
+speed.
+
 
 Zen of Python
 -------------
@@ -451,6 +476,23 @@ Then run it on a file or series of files to get a report of any violations.
     optparse.py:357:17: E201 whitespace after '{'
     optparse.py:472:29: E221 multiple spaces before operator
     optparse.py:544:21: W601 .has_key() is deprecated, use 'in'
+
+The program `autopep8 <https://pypi.python.org/pypi/autopep8/>`_ can be used to
+automatically reformat code in the PEP 8 style. Install the program with:
+
+.. code-block:: console
+
+    $ pip install autopep8
+
+Use it to format a file in-place with:
+
+.. code-block:: console
+
+    $ autopep8 --in-place optparse.py
+
+Excluding the ``--in-place`` flag will cause the program to output the modified
+code directly to the console for review. The ``--aggressive`` flag will perform
+more substantial changes and can be applied multiple times for greater effect.
 
 Conventions
 ----------------

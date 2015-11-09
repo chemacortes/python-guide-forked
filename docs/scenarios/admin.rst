@@ -232,14 +232,40 @@ The Ansible playbook will ping all of the servers in the :file:`hosts.yml` file.
 You can also select groups of servers using Ansible. For more information
 about Ansible, read the `Ansible Docs <http://docs.ansible.com/>`_.
 
+`An Ansible tutorial <https://serversforhackers.com/an-ansible-tutorial/>`_ is also a 
+great and detailed introduction to getting started with Ansible.
+
 
 Chef
 ----
+`Chef <https://www.chef.io/chef/>`_  is a systems and cloud infrastructure automation 
+framework that makes it easy to deploy servers and applications to any physical, 
+virtual, or cloud location. In case this is your choice for configuration management, 
+you will primarily use Ruby to write your infrastructure code. 
 
-.. todo:: Write about Chef
+Chef clients run on every server that is part of your infrastructure and these regularly 
+check with your Chef server to ensure your system is always aligned and represents the 
+desired state. Since each individual server has its own distinct Chef client, each server 
+configures itself and this distributed approach makes Chef a scalable automation platform.
 
-    `Chef Documentation
-    <http://wiki.opscode.com/display/chef/Documentation>`_
+Chef works by using custom recipes (configuration elements), implemented in cookbooks. Cookbooks, which are basically 
+packages for infrastructure choices, are usually stored in your Chef server. 
+Read the `Digital Ocean tutorial series 
+<https://www.digitalocean.com/community/tutorials/how-to-install-a-chef-server-workstation-and-client-on-ubuntu-vps-instances>`_ 
+on chef to learn how to create a simple Chef Server.
+
+To create a simple cookbook the `knife <https://docs.chef.io/knife.html>`_ command is used:
+
+.. code-block:: console 
+
+    knife cookbook create cookbook_name
+
+`Getting started with Chef <http://gettingstartedwithchef.com/first-steps-with-chef.html>`_ 
+is a good starting point for Chef Beginners and many community maintained cookbooks that can 
+serve as a good reference or tweaked to serve your infrustructure configuration needs can be 
+found on the `Chef Supermarket <https://supermarket.chef.io/cookbooks>`_.
+
+- `Chef Documentation <https://docs.chef.io/>`_
 
 Puppet
 ------
@@ -255,8 +281,8 @@ system.  `Puppet Forge <https://forge.puppetlabs.com/>`_ is a repository for
 modules written by the community for Open Source and Enterprise Puppet.
 
 Puppet Agents are installed on nodes whose state needs to be monitored or
-changed.  A desginated server known as the Puppet Master is responsible for
-orchastrating the agent nodes.
+changed.  A designated server known as the Puppet Master is responsible for
+orchestrating the agent nodes.
 
 Agent nodes send basic facts about the system such as to the operating system,
 kernel, architecture, ip address, hostname etc. to the Puppet Master.
@@ -290,7 +316,7 @@ Here is an example of 'Hello World' in Puppet.
         #the notification message by default.
     }
 
-Here is another example with system based logic. Note how the operatingsystem
+Here is another example with system based logic. Note how the operating system
 fact is being used as a variable prepended with the ``$`` sign. Similarly, this
 holds true for other facts such as hostname which can be referenced by
 ``$hostname``
@@ -345,7 +371,12 @@ Blueprint
 Buildout
 --------
 
-.. todo:: Write about Buildout
+`Buildout <http://www.buildout.org>`_ is an open source software build tool.
+Buildout is created using the Python programming language. It implements a 
+principle of separation of configuration from the scripts that do the setting up.
+Buildout is primarily used to download and set up dependencies in Python eggs
+format of the software being developed or deployed. Recipes for build tasks in any
+environment can be created, and many are already available.
 
-    `Buildout Website <http://www.buildout.org>`_
+Buidout is written in Python.
 

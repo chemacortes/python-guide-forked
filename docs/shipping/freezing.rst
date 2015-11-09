@@ -1,17 +1,36 @@
+.. _freezing-your-code-ref:
+
+==================
 Freezing Your Code
 ==================
 
-An alternative to shipping your code is freezing it — shipping it as an
-executable with a bundled Python interpreter.
+To 'Freeze' your code is to distribute to end-users as an executable which
+includes a bundled Python interpreter.
 
-Many applications you use every day do this:
+Applications such as 'Dropbox', BitTorrent clients, 'Eve Online' and
+'Civilisation IV' do this.
 
-- Dropbox
-- BitTorrent
-- ...
+The advantage of distributing this way is that your application will work even
+if the user doesn't already have the required version of Python installed. On
+Windows, and even on many Linux distributions and OSX versions, the right
+version of Python will not already be installed.
+
+One disadvantage is that it will bloat your distribution by about 2MB.
+Another problem is that your application will not receive any security updates
+to the version of Python it uses unless you freeze a new version and get
+users to download it.
+
+Alternatives to Freezing
+------------------------
+
+:ref:`Packaging your code <packaging-your-code-ref>` is for distributing
+libraries or tools to other developers.
+
+On Linux, an alternative to freezing is to
+:ref:`create a Linux distro package <packaging-for-linux-distributions-ref>`
+(e.g. .deb files for Debian or Ubuntu, or .rpm files for Red Hat and SuSE.)
 
 .. todo:: Fill in "Freezing Your Code" stub
-
 
 
 Comparison
@@ -24,7 +43,7 @@ Solution    Windows Linux OS X Python 3 License One-file mode Zipfile import Egg
 =========== ======= ===== ==== ======== ======= ============= ============== ==== =====================
 bbFreeze    yes     yes   yes  no       MIT     no            yes            yes  yes
 py2exe      yes     no    no   yes      MIT     yes           yes            no   no
-pyInstaller yes     yes   yes  no       GPL     yes           no             yes  no
+pyInstaller yes     yes   yes  yes      GPL     yes           no             yes  no
 cx_Freeze   yes     yes   yes  yes      PSF     no            yes            yes  no
 py2app      no      no    yes  yes      MIT     no            yes            yes  yes
 =========== ======= ===== ==== ======== ======= ============= ============== ==== =====================
@@ -56,7 +75,7 @@ Prerequisite is to install :ref:`Python on Windows <install-windows>`.
 
 1. Download and install http://sourceforge.net/projects/py2exe/files/py2exe/
 
-2. Write :file:`setup.py` (`List of configuration options <http://www.py2exe.org/index.cgi/ListOfOptions>`_)::
+2. Write :file:`setup.py` (`List of configuration options <http://www.py2exe.org/index.cgi/ListOfOptions>`_):
 
 .. code-block:: python
 
@@ -88,7 +107,7 @@ Prerequisite is to have installed :ref:`Python, Setuptools and pywin32 dependenc
 - `Manual <http://www.pyinstaller.org/export/d3398dd79b68901ae1edd761f3fe0f4ff19cfb1a/project/doc/Manual.html?format=raw>`_
 
 
-OS X
+OS X
 ----
 
 

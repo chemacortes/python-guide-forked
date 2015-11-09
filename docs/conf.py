@@ -69,7 +69,10 @@ release = '0.0.1'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = [
+    '_build',
+    '_themes/*.rst',  # Excluded due to README.rst in _themes/
+]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -251,7 +254,7 @@ epub_copyright = u'2014, Kenneth Reitz'
 # The format is a list of tuples containing the path and title.
 #epub_pre_files = []
 
-# HTML files shat should be inserted after the pages created by sphinx.
+# HTML files that should be inserted after the pages created by sphinx.
 # The format is a list of tuples containing the path and title.
 #epub_post_files = []
 
