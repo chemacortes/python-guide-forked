@@ -1,7 +1,7 @@
-Getting Started
----------------
+Getting Started with Python
+---------------------------
 
-This part of the guide focuses on setting up your Python environment.
+New to Python? Let's properly setup up your Python environment.
 
 .. toctree::
    :maxdepth: 2
@@ -20,10 +20,10 @@ This part of the guide focuses on setting up your Python environment.
 
 
 
-Writing Great Code
-------------------
+Writing Great Python Code
+-------------------------
 
-This part of the guide focuses on best practices for writing Python code.
+This part of the guide focuses on the best-practices for writing Python code.
 
 .. toctree::
    :maxdepth: 2
@@ -39,8 +39,8 @@ This part of the guide focuses on best practices for writing Python code.
 
 
 
-Scenario Guide
---------------
+Scenario Guide for Python Applications
+--------------------------------------
 
 This part of the guide focuses on tool and module advice based on
 different scenarios.
@@ -60,14 +60,16 @@ different scenarios.
    scenarios/speed
    scenarios/scientific
    scenarios/imaging
+   scenarios/serialization
    scenarios/xml
    scenarios/json
    scenarios/crypto
+   scenarios/ml
    scenarios/clibs
 
 
-Shipping Great Code
--------------------
+Shipping Great Python Code
+--------------------------
 
 This part of the guide focuses on deploying your Python code.
 
@@ -78,8 +80,11 @@ This part of the guide focuses on deploying your Python code.
    shipping/freezing
 
 
-Development Environment
------------------------
+Python Development Environments
+-------------------------------
+
+This part of the guide focus on the Python development environment,
+and the best-practice tools that are available for writing Python code.
 
 .. toctree::
    :maxdepth: 2
@@ -106,12 +111,15 @@ background information about Python, then focuses on next steps.
    intro/documentation
    intro/news
 
-
+.. note::
+   Notes defined within all diatonic and chromatic musical scales have been
+   intentionally excluded from this list of additional notes. Additionally,
+   this note.
 
 
 --------------------------------------
 
-Contribution notes and legal information are here (for those interested).
+Contribution notes and legal information (for those interested).
 
 .. toctree::
    :maxdepth: 2

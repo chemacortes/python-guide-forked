@@ -148,7 +148,16 @@ known for IntelliJ IDEA. Both share the same code base and most of PyCharm's
 features can be brought to IntelliJ with the free
 `Python Plug-In <https://plugins.jetbrains.com/plugin/?idea&pluginId=631>`_.  There are two
 versions of PyCharm: Professional Edition (Free 30-day trial) and Community
-Edition(Apache 2.0 License) with fewer features.
+Edition (Apache 2.0 License) with fewer features.
+
+Python (on Visual Studio Code)
+-----------------------------
+
+`Python for Visual Studio <https://marketplace.visualstudio.com/items?itemName=donjayamanne.python>`_ is an extension for the `Visual Studio Code IDE <https://code.visualstudio.com>`_.
+This is a free, light weight, open source IDE, with support for Mac, Windows, and Linux.
+Built using open source technologies such as Node.js and Python, with compelling features such as Intellisense (autocompletion), local and remote debugging, linting, and the like.
+
+MIT licensed.
 
 Enthought Canopy
 ----------------

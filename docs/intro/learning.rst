@@ -13,6 +13,15 @@ quick-start guide to the language.
 
     `The Python Tutorial <http://docs.python.org/tutorial/index.html>`_
 
+Python for Beginners
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+thepythonguru.com is a tutorial focuses on beginner programmers. It covers many python concepts
+in depth. It also teaches you some advance constructs of python like lambda expression, regular expression.
+At last it finishes off with  tutorial "How to access MySQL db using python"
+
+
+   `Python for beginners <http://thepythonguru.com/>`_
 
 Learn Python Interactive Tutorial
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,15 +38,15 @@ without having to install Python locally.
 If you want a more traditional book, *Python For You and Me* is an excellent
 resource for learning all aspects of the language.
 
-    `Python for You and Me <http://pymbook.readthedocs.org/>`_
+    `Python for You and Me <https://pymbook.readthedocs.io/>`_
 
 Online Python Tutor
 ~~~~~~~~~~~~~~~~~~~
 
-Online Python Tutor gives you a visual step by step 
+Online Python Tutor gives you a visual step by step
 representation of how your program runs. Python Tutor
 helps people overcome a fundamental barrier to learning
-programming by understanding what happens as the computer 
+programming by understanding what happens as the computer
 executes each line of a program's source code.
 
     `Online Python Tutor <http://pythontutor.com/>`_
@@ -143,8 +152,23 @@ Learn to Program in Python with Codeacademy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A Codeacademy course for the absolute Python beginner. This free and interactive course provides and teaches the basics (and beyond) of Python programming whilst testing the user's knowledge in between progress.
+This course also features a built-in interpreter for receiving instant feedback on your learning.
 
     `Learn to Program in Python with Codeacademy <http://www.codecademy.com/en/tracks/python>`_
+
+
+Intermediate
+------------
+
+Effective Python
+~~~~~~~~~~~~~~~~
+
+This book contains 59 specific ways to improve writing Pythonic code. At 227
+pages, it is a very brief overview of some of the most commons adapations
+programmers need to make to become efficient intermediate level Python
+programmers.
+
+    `Effective Python <http://www.effectivepython.com/>`_
 
 
 Advanced
@@ -185,6 +209,8 @@ in Python. Magic methods are surrounded by double underscores (i.e. __init__)
 and can make classes and objects behave in different and magical ways.
 
     `A Guide to Python's Magic Methods <http://www.rafekettler.com/magicmethods.html>`_
+.. note:: The Rafekettler.com is currently down, you can go to their Github version directly. Here you can find a PDF version:
+    `A Guide to Python's Magic Methods (repo on GitHub) <https://github.com/RafeKettler/magicmethods/blob/master/magicmethods.pdf>`_
 
 
 For Engineers and Scientists
@@ -229,16 +255,31 @@ formal, but rather focuses on explaining the underlying intuition and shows
 how to implement the algorithms in Python.
 
     `Programming Collective Intelligence <http://shop.oreilly.com/product/9780596529321.do>`_
-	
-	
+
+
 Transforming Code into Beautiful, Idiomatic Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Transforming Code into Beautiful, Idiomatic Python is a video by Raymond Hettinger. 
+Transforming Code into Beautiful, Idiomatic Python is a video by Raymond Hettinger.
 Learn to take better advantage of Python's best features and improve existing code
 through a series of code transformations, "When you see this, do that instead."
 
     `Transforming Code into Beautiful, Idiomatic Python <https://www.youtube.com/watch?v=OSGv2VnC0go>`_
+
+
+Fullstack Python
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Fullstack Python offers a complete top-to-bottom resource for web development
+using Python.
+
+From setting up the webserver, to designing the front-end, choosing a database,
+optimizing/scaling, etc.
+
+As the name suggests, it covers everything you need to build and run a complete
+web app from scratch.
+
+    `Fullstack Python <https://www.fullstackpython.com>`_
 
 
 References
@@ -261,6 +302,15 @@ of the language.
 
     `The Python Language Reference <http://docs.python.org/reference/index.html>`_
 
+Python Essential Reference
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Python Essential Reference, written by David Beazley, is the definitive reference
+guide to Python. It concisely explains both the core language and the most essential
+parts of the standard library. It covers Python 3 and 2.6 versions.
+
+    `Python Essential Reference <http://www.dabeaz.com/per.html>`_
+
 Python Pocket Reference
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -269,7 +319,7 @@ the core language, with descriptions of commonly used modules and toolkits. It
 covers Python 3 and 2.6 versions.
 
     `Python Pocket Reference <http://shop.oreilly.com/product/9780596158095.do>`_
-	
+
 Python Cookbook
 ~~~~~~~~~~~~~~~
 
@@ -290,5 +340,5 @@ is important. It also contains two code samples for each idiom: the "Harmful"
 way to write it and the "Idiomatic" way.
 
 	`For Python 2.7.3+ <http://www.amazon.com/Writing-Idiomatic-Python-2-7-3-Knupp/dp/1482372177/>`_
-	
+
 	`For Python 3.3+  <http://www.amazon.com/Writing-Idiomatic-Python-Jeff-Knupp-ebook/dp/B00B5VXMRG/>`_
